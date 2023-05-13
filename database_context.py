@@ -5,8 +5,8 @@ class Context:
         try:
             self.mydb =  db.connect(
             host = "localhost",
-            username = "root",
-            password = "Abscular09@",
+            username = "confidential",
+            password = "confidential",
             database = "StudyManagementApplication"
             )   
         except Exception as e:
