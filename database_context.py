@@ -26,6 +26,7 @@ class Context:
         try:
             cursor = self.mydb.cursor()
             cursor.execute(query)
+            self.mydb.commit()
         except Exception as e:
             print("[ERROR] " + e.__str__())
 
