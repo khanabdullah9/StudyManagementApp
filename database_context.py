@@ -64,17 +64,10 @@ class Context:
         """
         param_str = ""
         for p in range(0, len(proc_params) - 1):
-
-            if type(p) is int or type(p) is float:
-                param_str += f"{str(proc_params[p])},"
-            elif type(p) is str or type(p) is chr:
-                param_str += f"'{proc_params[p]}',"
+            param_str += f"'{proc_params[p]}',"
 
         p1 = proc_params[len(proc_params) - 1]
         index_p1 = proc_params.index(p1)
-        if type(p1) is int or type(p1) is float:
-            param_str += f"{str(proc_params[index_p1])}"
-        elif type(p1) is str or type(p1) is chr:
-            param_str += f"'{proc_params[index_p1]}'"
+        param_str += f"'{proc_params[index_p1]}'"
 
         return param_str
